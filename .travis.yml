@@ -1,4 +1,4 @@
-anguage: python
+language: python
 python:
   - "3.8.2"
 before_install:
@@ -6,7 +6,7 @@ before_install:
   - pip install -U pip
   - pip install -U pytest
   - pip install coverage
-script: pytest -q test_wallet.py
+script: pytest -q tests/test_wallet.py
 after_success:
   - coverage run -m pytest -q test_wallet.py
   - coverage report -m
