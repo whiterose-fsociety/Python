@@ -1,6 +1,6 @@
 import pytest
 import sys 
-sys.path.append("/home/molefe/Playground/Testing/Python/project/wallet")
+sys.path.append("/home/travis/build/whiterose-fsociety/Python/wallet/wallet.py")
 from wallet import Wallet,InsufficientAmount
 
 
