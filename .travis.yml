@@ -3,10 +3,15 @@ python:
   - "3.8.2"
 before_install:
   - python --version
+  - pip install virtualenv
+  - python -m venv .venv
+  - source /venv/bin/activate
   - pip install -U pip
   - pip install -U pytest
   - pip install coverage
-script: pytest -q tests/test_wallet.py
+  - pip install wheel
+  - pip install -e ./wallet
+script: python -q tests/test_wallet.py
 after_success:
   - coverage run -m pytest -q test_wallet.py
   - coverage report -m
