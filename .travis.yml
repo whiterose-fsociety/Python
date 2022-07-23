@@ -7,7 +7,7 @@ before_install:
   - pip install -U pytest
   - pip install coverage
   - pip install wheel
-  - pip install -e ./wallet
+  - pip install -e .
 script: python -q tests/test_wallet.py
 after_success:
   - coverage run -m pytest -q test_wallet.py
