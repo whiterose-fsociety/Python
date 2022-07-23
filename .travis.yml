@@ -8,8 +8,8 @@ before_install:
   - pip install coverage
   - pip install wheel
   - pip install -e .
-script: python -q tests/test_wallet.py
+script: pytest
 after_success:
-  - coverage run -m pytest -q test_wallet.py
+  - coverage run -m pytest -q tests/test_wallet.py
   - coverage report -m
   - coverage html
